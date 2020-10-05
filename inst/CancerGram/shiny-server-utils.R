@@ -9,22 +9,22 @@ my_DT <- function(x, ...)
 
 AMP_DT <- function(x, ...) {
   df <- x
-  colnames(df) <- c("Putative AMP", "Probability")
-  formatRound(my_DT(df, ...), 5, 4) 
+  colnames(df) <- c("Putative ACP", "Probability")
+  formatRound(my_DT(df, ...), 2, 4) 
 }
 
 
 plot_single_protein <- function(single_prot) {
   p <- ggplot(single_prot, aes(x = start, xend = end,
-                               y = pred, yend = pred, color = decision,
+                               y = res, yend = res, color = decision,
                                linetype = decision)) +
     geom_segment() +
     geom_hline(yintercept = 0.5, color = "red") +
     ggtitle(single_prot[["seq_name"]][1]) +
     scale_x_continuous("Position") +
-    scale_y_continuous("Probability of AMP", limits = c(0, 1)) +
-    scale_color_manual("AMP", values = c(No = "#878787", Yes = "black")) + 
-    scale_linetype_manual("AMP", values = c(No = "dashed", Yes = "solid")) + 
+    scale_y_continuous("Probability of ACP", limits = c(0, 1)) +
+    scale_color_manual("ACP", values = c(No = "#878787", Yes = "black")) + 
+    scale_linetype_manual("ACP", values = c(No = "dashed", Yes = "solid")) + 
     theme_bw() +
     theme(plot.title = element_text(hjust = 0.5),
           legend.position = "bottom")
@@ -70,7 +70,7 @@ predict_in_shiny <- function(object, newdata) {
       res
     })
     
-  }, style = "old")
+  }, style = "notification")
   
   if(is.null(names(newdata))) {
     names(all_preds) <- paste0("seq", 1L:length(all_preds))

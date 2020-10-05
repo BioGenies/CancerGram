@@ -52,7 +52,7 @@ shinyServer(function(input, output) {
   
   output[["decision_table"]] <- renderDataTable({
     df <- decision_table()
-    colnames(df) <- c("Protein name", "ACP probability", "AMP", "Negative", "Decision")
+    colnames(df) <- c("Protein name", "ACP prediction", "AMP prediction", "Negative prediction", "Decision")
     my_DT(df) %>% 
       formatRound(2, 4) 
     
