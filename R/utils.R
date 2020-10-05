@@ -31,7 +31,6 @@ calculate_statistics <- function(pred) {
 calculate_statistics_single <- function(mer_preds, group) {
 
   preds <- mer_preds[, group]
-  colnames(preds) <- ("pred")
   df <- calculate_statistics(preds)
   nondescriptive_names <- colnames(df)
   colnames(df)[match(colnames(df), table = nondescriptive_names, nomatch = 0) > 0] <- 
