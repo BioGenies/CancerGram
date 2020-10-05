@@ -17,12 +17,12 @@
 #' data(CancerGram_predictions)
 #' pred2df(CancerGram_predictions)
 pred2df <- function(x) {
-  res <- get_decision(cbind(data.frame(seq_name = names(x)),
-                            do.call(rbind, 
-                                    lapply(names(x), function(ith_prot) {
-                                      x[[ith_prot]][["single_prot_pred"]]
-                                    })
-                            )
+  get_decision(cbind(data.frame(seq_name = names(x)),
+                     do.call(rbind, 
+                             lapply(names(x), function(ith_prot) {
+                               x[[ith_prot]][["single_prot_pred"]]
+                             })
+                     )
   )
   )
 }
