@@ -82,7 +82,7 @@ find_ngrams <- function(seq, decoded_ngrams) {
 #' @export
 #' @importFrom devtools install_github
 install_CancerGramModel <- function() {
-  install_github("ksidorczuk/CancerGramModel")
+  install_github("BioGenies/CancerGramModel")
 }
 
 is_CancerGramModel_installed <- function() {
@@ -100,14 +100,14 @@ require_CancerGramModel <- function() {
               tryCatch(install_CancerGramModel(),
                        finally = if (!is_CancerGramModel_installed()) 
                          warning("There was an error during an attempt to install 'CancerGramModel' package.", call. = FALSE)),
-              message("You cannot access full functionality of this package without having installed 'CancerGramModel'. You can do it manually by calling 'devtools::install_github('ksidorczuk/CancerGramModel')'", call. = FALSE),
+              message("You cannot access full functionality of this package without having installed 'CancerGramModel'. You can do it manually by calling 'devtools::install_github('BioGenies/CancerGramModel')'", call. = FALSE),
               {options(CancerGram_suppress_prompt = TRUE)
                 cat("Ok, but you cannot access full functionality of this package without having installed 'CancerGramModel'")},
-              message("You cannot access full functionality of this package without having installed 'CancerGramModel'. You can do it manually by calling 'devtools::install_github('ksidorczuk/CancerGramModel')'", call. = FALSE)
+              message("You cannot access full functionality of this package without having installed 'CancerGramModel'. You can do it manually by calling 'devtools::install_github('BioGenies/CancerGramModel')'", call. = FALSE)
       )
     } 
   } else {
-    message("To be able to use CancerGram properly, you should have installed 'CancerGramModel' with 'devtools::install_github('ksidorczuk/CancerGramModel'.")
+    message("To be able to use CancerGram properly, you should have installed 'CancerGramModel' with 'devtools::install_github('BioGenies/CancerGramModel'.")
   }
   
 }
