@@ -40,7 +40,8 @@ Imports:
     pbapply,
     ranger,
     shiny,
-    stringi
+    stringi,
+    dplyr
 Suggests:
     DT,
     ggplot2,

@@ -20,6 +20,7 @@ information:
   \item{amp}{Probability that a protein/peptide possesses antimicrobial activity.}
   \item{neg}{Probability that a protein/peptide do not possesses anticancer 
   or antimicrobial activity.}
+  \item{decision}{Result of the prediction.}
   }
 }
 \description{

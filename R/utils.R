@@ -50,6 +50,14 @@ calculate_statistics_mc <- function(mer_preds, groups) {
   stat
 } 
 
+#' @importFrom dplyr mutate case_when
+get_decision <- function(preds) {
+  mutate(preds, decision = case_when(acp > amp & acp > neg  ~ "ACP",
+                                     amp > acp & amp > neg ~ "AMP",
+                                     neg > amp & neg > acp ~ "neg"))
+}
+
+
 #' @importFrom stringi stri_count
 find_ngrams <- function(seq, decoded_ngrams) {
   

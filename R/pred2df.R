@@ -10,17 +10,19 @@
 #'   \item{amp}{Probability that a protein/peptide possesses antimicrobial activity.}
 #'   \item{neg}{Probability that a protein/peptide do not possesses anticancer 
 #'   or antimicrobial activity.}
+#'   \item{decision}{Result of the prediction.}
 #'   }
 #' @export
 #' @examples 
 #' data(CancerGram_predictions)
 #' pred2df(CancerGram_predictions)
 pred2df <- function(x) {
-  res <- cbind(data.frame(seq_name = names(x)),
-        do.call(rbind, 
-                lapply(names(x), function(ith_prot) {
-                  x[[ith_prot]][["single_prot_pred"]]
-                })
-        )
+  res <- get_decision(cbind(data.frame(seq_name = names(x)),
+                            do.call(rbind, 
+                                    lapply(names(x), function(ith_prot) {
+                                      x[[ith_prot]][["single_prot_pred"]]
+                                    })
+                            )
+  )
   )
 }
