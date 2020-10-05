@@ -4,11 +4,11 @@ library(shinythemes)
 shinyUI(fluidPage(tags$head(includeScript("ga.js"), 
                             tags$link(rel = "stylesheet", type = "text/css", href = "progress.css")),
                   title = "Cancergram",
-                  theme = shinytheme("united"),
+                  theme = shinytheme("spacelab"),
                   headerPanel(""),
 
                   sidebarLayout(
-                    sidebarPanel(style = "background-color: #e0e0e0;border-color: #E95420;border-width: .25rem",
+                    sidebarPanel(style = "background-color: #fff; border-color: #00578a;border-width: .25rem",
                                  includeMarkdown("readme.md"),
                                  uiOutput("dynamic_ui")
                     ),

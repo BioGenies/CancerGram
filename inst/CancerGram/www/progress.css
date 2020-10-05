@@ -15,7 +15,7 @@
   text-align: center;
   line-height: 200px;
   background-color: rgba(255,255,255, 1);
-  border: 3px solid red;
+  border: 3px #00578a;
   position:relative;
   margin:auto;
 }
