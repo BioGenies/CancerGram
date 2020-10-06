@@ -16,7 +16,7 @@ AMP_DT <- function(x, ...) {
 
 plot_single_protein <- function(single_prot) {
   p <- ggplot(single_prot, aes(x = start, xend = end,
-                               y = res, yend = res, color = decision,
+                               y = prob, yend = prob, color = decision,
                                linetype = decision)) +
     geom_segment() +
     geom_hline(yintercept = 0.5, color = "red") +

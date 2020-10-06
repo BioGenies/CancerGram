@@ -108,7 +108,7 @@ shinyServer(function(input, output) {
         #browser()
         plot_single_protein(detailed_preds()[[my_i]])
         })
-      output[[paste0("detailed_table", my_i)]] <- renderDataTable(AMP_DT(get_AMPs(selected_proteins()[[my_i]])))
+      output[[paste0("detailed_table", my_i)]] <- renderDataTable(AMP_DT(AmpGram:::get_AMPs(selected_proteins()[[my_i]]))) # tutaj zmiany
     })
   }
   
@@ -156,10 +156,10 @@ shinyServer(function(input, output) {
         tabPanel("Results",
                  tags$h4("Select at least one protein to produce detailed results."), 
                  dataTableOutput("decision_table")
-        ),
-        tabPanel("Detailed results",
-                 uiOutput("detailed_tab")
         )
+        #tabPanel("Detailed results",
+         #        uiOutput("detailed_tab")
+        #)
       )
     }
   })
