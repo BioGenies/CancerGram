@@ -54,67 +54,67 @@ shinyServer(function(input, output) {
     df <- decision_table()
     colnames(df) <- c("Protein name", "ACP prediction", "AMP prediction", "Negative prediction", "Decision")
     my_DT(df) %>% 
-      formatRound(2, 4) 
+      formatRound(columns = c("ACP prediction", "AMP prediction", "Negative prediction"), digits = 4) 
     
   })
   
-  selected_proteins <- reactive({
-    validate(
-      need(input[["decision_table_rows_selected"]], 
-           "Select at least one row in the Results table")
-    )
-    
-    prediction()[input[["decision_table_rows_selected"]]]
-  })
+  #selected_proteins <- reactive({
+    #validate(
+     # need(input[["decision_table_rows_selected"]], 
+    #       "Select at least one row in the Results table")
+   # )
+  #  
+ #   prediction()[input[["decision_table_rows_selected"]]]
+#  })
   
-  detailed_preds <- reactive(({
+#  detailed_preds <- reactive(({
     
-    selected_pred_data <- selected_proteins()
+#    selected_pred_data <- selected_proteins()
     
-    detailed_pred_list <- lapply(1L:length(selected_pred_data), function(ith_pred_id) {
-      ith_pred <- selected_pred_data[[ith_pred_id]]
+#    detailed_pred_list <- lapply(1L:length(selected_pred_data), function(ith_pred_id) {
+ #     ith_pred <- selected_pred_data[[ith_pred_id]]
       
-      data.frame(seq_name = names(selected_pred_data)[ith_pred_id],
-                 start = 1L:length(ith_pred[["all_mers_pred"]]), 
-                 end = 1L:length(ith_pred[["all_mers_pred"]]) + 9, 
-                 pred = ith_pred[["all_mers_pred"]],
-                 decision = factor(ith_pred[["all_mers_pred"]] > 0.5, 
-                                   levels = c("FALSE", "TRUE"),
-                                   labels = c("No", "Yes")))
-    })
+  #    data.frame(seq_name = names(selected_pred_data)[ith_pred_id],
+   #              start = 1L:length(ith_pred[["all_mers_pred"]]), 
+    #             end = 1L:length(ith_pred[["all_mers_pred"]]) + 9, 
+     #            pred = ith_pred[["all_mers_pred"]],
+      #           decision = factor(ith_pred[["all_mers_pred"]] > 0.5, 
+       #                            levels = c("FALSE", "TRUE"),
+        #                           labels = c("No", "Yes")))
+  #  })
     
-    names(detailed_pred_list) <- names(selected_pred_data)
-    detailed_pred_list
-    
-  }))
+#    names(detailed_pred_list) <- names(selected_pred_data)
+#    detailed_pred_list
+  #  
+ # }))
   
   
   
-  output[["detailed_preds"]] <- renderUI({
-    detailed_preds_list <- lapply(1L:length(detailed_preds()), function(i) {
-      list(plotOutput(paste0("detailed_plot", i)),
-           dataTableOutput(paste0("detailed_table", i)))
-    })
-    c(list(downloadButton("download_long_graph", "Download long output (with graphics)")),
-      do.call(tagList, unlist(detailed_preds_list, recursive = FALSE)))
-  })
+ # output[["detailed_preds"]] <- renderUI({
+#    detailed_preds_list <- lapply(1L:length(detailed_preds()), function(i) {
+ #     list(plotOutput(paste0("detailed_plot", i)),
+  #         dataTableOutput(paste0("detailed_table", i)))
+  #  })
+  #  c(list(downloadButton("download_long_graph", "Download long output (with graphics)")),
+  #    do.call(tagList, unlist(detailed_preds_list, recursive = FALSE)))
+#  })
   
   
-  for (i in 1L:50) {
-    local({
-      my_i <- i
+ # for (i in 1L:50) {
+#    local({
+ #     my_i <- i
       
-      output[[paste0("detailed_plot", my_i)]] <- renderPlot({
+#      output[[paste0("detailed_plot", my_i)]] <- renderPlot({
         #browser()
-        plot_single_protein(detailed_preds()[[my_i]])
-        })
-      output[[paste0("detailed_table", my_i)]] <- renderDataTable(AMP_DT(AmpGram:::get_AMPs(selected_proteins()[[my_i]]))) # tutaj zmiany
-    })
-  }
+ #       plot_single_protein(detailed_preds()[[my_i]])
+  #      })
+   #   output[[paste0("detailed_table", my_i)]] <- renderDataTable(AMP_DT(AmpGram:::get_AMPs(selected_proteins()[[my_i]]))) # tutaj zmiany
+  #  })
+  #}
   
-  output[["detailed_tab"]] <- renderUI({
-    uiOutput("detailed_preds")
-  })
+#  output[["detailed_tab"]] <- renderUI({
+ #   uiOutput("detailed_preds")
+#  })
   
   output[["dynamic_ui"]] <- renderUI({
     if (!is.null(input[["seq_file"]]))
@@ -154,7 +154,6 @@ shinyServer(function(input, output) {
     } else {
       tabsetPanel(
         tabPanel("Results",
-                 tags$h4("Select at least one protein to produce detailed results."), 
                  dataTableOutput("decision_table")
         )
         #tabPanel("Detailed results",

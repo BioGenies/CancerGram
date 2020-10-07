@@ -70,7 +70,7 @@ predict_in_shiny <- function(object, newdata) {
       res
     })
     
-  }, style = "notification")
+  }, style = "old")
   
   if(is.null(names(newdata))) {
     names(all_preds) <- paste0("seq", 1L:length(all_preds))
@@ -80,3 +80,4 @@ predict_in_shiny <- function(object, newdata) {
     
   all_preds
 }
+
