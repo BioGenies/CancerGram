@@ -1,3 +1,6 @@
+[![R build status](https://github.com/BioGenies/CancerGram/workflows/R-CMD-check/badge.svg)](https://github.com/BioGenies/CancerGram/actions)
+
+
 Identify anticancer peptides
 -------------------------
 
