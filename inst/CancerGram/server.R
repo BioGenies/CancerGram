@@ -32,9 +32,9 @@ shinyServer(function(input, output) {
         #dummy error, just to stop further processing
         stop("Too many sequences. Please use CancerGram locally.")
       } else {
-        if(any(lengths(input_sequences) < 10)) {
+        if(any(lengths(input_sequences) < 5)) {
           #dummy error, just to stop further processing
-          stop("The minimum length of the sequence is 10 amino acids.")
+          stop("The minimum length of the sequence is 5 amino acids.")
         } else {
           predict_in_shiny(CancerGram_model, input_sequences)
         }
