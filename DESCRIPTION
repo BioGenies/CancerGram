@@ -3,7 +3,7 @@ Type: Package
 Title: Prediction of Anticancer Peptides
 Version: 1.0
 LazyData: TRUE
-Date: 2020-10-02
+Date: 2020-10-11
 Authors@R: c(person("Michal", "Burdukiewicz", 
            email = "michalburdukiewicz@gmail.com", 
            comment = c(ORCID = "0000-0001-8926-582X"),

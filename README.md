@@ -79,3 +79,6 @@ brew link --force curl
 
 Note that on OS-X you must recompile the R package from source after force-linking curl, otherwise you get a version conflict with the system version of libcurl.
 
+Funding
+------------------------
+This work was supported by National Science Centre grants 2017/26/D/NZ8/00444, 2018/31/N/NZ2/01338 and 2019/35/N/NZ8/03366 to FP.
