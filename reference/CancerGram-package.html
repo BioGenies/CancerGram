@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Function reference • CancerGram</title>
+<title>Prediction of anticancer peptides — CancerGram-package • CancerGram</title>
 
 
 <!-- jquery -->
@@ -39,7 +39,21 @@
 
 
 
-<meta property="og:title" content="Function reference" />
+<meta property="og:title" content="Prediction of anticancer peptides — CancerGram-package" />
+<meta property="og:description" content="Antimicrobial peptides (AMPs) constitute a diverse group of bioactive molecules 
+that provide multicellular organisms with protection against microorganisms, and 
+microorganisms with weaponry for competition. Some AMPs can target cancer cells 
+and they are called anticancer peptides (ACPs). Due to their small size, positive 
+charge, hydrophobicity and amphipathicity, AMPs and ACPs interact with negatively 
+charged components of biological membranes. AMPs preferentially permeabilize 
+microbial membranes, but ACPs additionally target mitochondrial and plasma 
+membrane of cancer cells. Taking into account the therapeutic potential of ACPs 
+and millions of deaths due to cancer annually, it is of vital importance to find 
+new cationic peptides that selectively destroy cancer cells. Therefore, efficient 
+computational tools for ACP prediction are essential to identify the best ACP 
+candidates without undertaking expensive experimental studies. CancerGram is 
+a novel tool that uses stacked random forests and n-gram analysis for prediction
+of ACPs." />
 
 
 
@@ -58,7 +72,7 @@
   </head>
 
   <body data-spy="scroll" data-target="#toc">
-    <div class="container template-reference-index">
+    <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -105,79 +119,49 @@
       </header>
 
 <div class="row">
-  <div class="contents col-md-9">
+  <div class="col-md-9 contents">
     <div class="page-header">
-      <h1>Reference</h1>
+    <h1>Prediction of anticancer peptides</h1>
+    <small class="dont-index">Source: <a href='https://github.com/BioGenies/CancerGram/blob/master/R/CancerGram-package.R'><code>R/CancerGram-package.R</code></a></small>
+    <div class="hidden name"><code>CancerGram-package.Rd</code></div>
     </div>
 
-    <table class="ref-index">
+    <div class="ref-description">
+    <p>Antimicrobial peptides (AMPs) constitute a diverse group of bioactive molecules 
+that provide multicellular organisms with protection against microorganisms, and 
+microorganisms with weaponry for competition. Some AMPs can target cancer cells 
+and they are called anticancer peptides (ACPs). Due to their small size, positive 
+charge, hydrophobicity and amphipathicity, AMPs and ACPs interact with negatively 
+charged components of biological membranes. AMPs preferentially permeabilize 
+microbial membranes, but ACPs additionally target mitochondrial and plasma 
+membrane of cancer cells. Taking into account the therapeutic potential of ACPs 
+and millions of deaths due to cancer annually, it is of vital importance to find 
+new cationic peptides that selectively destroy cancer cells. Therefore, efficient 
+computational tools for ACP prediction are essential to identify the best ACP 
+candidates without undertaking expensive experimental studies. CancerGram is 
+a novel tool that uses stacked random forests and n-gram analysis for prediction
+of ACPs.</p>
+    </div>
 
-    <colgroup>
-      
-      <col class="alias" />
-      <col class="title" />
-    </colgroup>
 
-    <tbody>
-      <tr>
-        <th colspan="2">
-          <h2 id="section-all-functions" class="hasAnchor"><a href="#section-all-functions" class="anchor"></a>All functions</h2>
-          <p class="section-desc"></p>
-        </th>
-      </tr>
-      
-      
-    </tbody><tbody>
-      
-      
-      <tr>
-        
-        <td>
-          <p><code><a href="CancerGram-package.html">CancerGram-package</a></code> </p>
-        </td>
-        <td><p>Prediction of anticancer peptides</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="CancerGram_gui.html">CancerGram_gui()</a></code> </p>
-        </td>
-        <td><p>CancerGram Graphical User Interface</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="CancerGram_predictions.html">CancerGram_predictions</a></code> </p>
-        </td>
-        <td><p>Prediction of anticancer peptides</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="install_CancerGramModel.html">install_CancerGramModel()</a></code> </p>
-        </td>
-        <td><p>Install CancerGramModel package containing model for ACP prediction</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="pred2df.html">pred2df()</a></code> </p>
-        </td>
-        <td><p>Convert predictions to data.frame
-Return predictions as data.frame</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="predict.cancergram_model.html">predict(<i>&lt;cancergram_model&gt;</i>)</a></code> </p>
-        </td>
-        <td><p>Predict anticancer peptides</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="read_txt.html">read_txt()</a></code> </p>
-        </td>
-        <td><p>Read sequences from .txt file</p></td>
-      </tr>
-    </tbody>
-    </table>
+
+    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
+
+    <p>CancerGram is available as R function (<code><a href='predict.cancergram_model.html'>predict.cancergram_model</a></code>) 
+or shiny GUI (<code><a href='CancerGram_gui.html'>CancerGram_gui</a></code>).</p>
+<p>CancerGram requires the external package, CancerGramModel, which 
+contains models necessary to perform the prediction. The model 
+can be installed using <code><a href='install_CancerGramModel.html'>install_CancerGramModel</a></code></p>
+    <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
+
+    <p>Burdukiewicz M, Sidorczuk K, Rafacz D, Pietluch F, Bakala M,
+Slowik J, Gagat P. (2020) <em>CancerGram: an effective classifier for 
+differentiating anticancer from antimicrobial peptides</em>. (submitted)</p>
+    <h2 class="hasAnchor" id="author"><a class="anchor" href="#author"></a>Author</h2>
+
+    <p>Maintainer: Michal Burdukiewicz &lt;michalburdukiewicz@gmail.com&gt;</p>
+
   </div>
-
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
       <h2 data-toc-skip>Contents</h2>
