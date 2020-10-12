@@ -4,7 +4,7 @@
 Identify anticancer peptides
 -------------------------
 
-CancerGram identifies anticancer peptides using n-gram encoding and random forests. It can be also accessed as a web-based service **insert link here**. 
+CancerGram identifies anticancer peptides using n-gram encoding and random forests. It can be also accessed as a web-based service http://biongram.biotech.uni.wroc.pl/CancerGram/. 
 
 Local instance of CancerGram
 ------------------------
