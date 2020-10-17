@@ -1,7 +1,7 @@
 Package: CancerGram
 Type: Package
 Title: Prediction of Anticancer Peptides
-Version: 1.0
+Version: 1.0.0
 LazyData: TRUE
 Date: 2020-10-17
 Authors@R: c(person("Michal", "Burdukiewicz", 
