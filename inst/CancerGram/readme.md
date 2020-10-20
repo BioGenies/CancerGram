@@ -6,7 +6,7 @@
 * Be patient - calculations can take up to few minutes.  
 * Up to 50 sequences may be analyzed at the same time using web server. If you need larger query, please use the [CancerGram](https://CRAN.R-project.org/package=CancerGram) package for **R**.
 
-**Authors**: [Michal Burdukiewicz](https://github.com/michbur), Filip Pietluch, Katarzyna Sidorczuk
+**Authors**: Michal Burdukiewicz, Filip Pietluch, Katarzyna Sidorczuk
 
 **Citation**:
-[Citation to our great article!](https://www.mdpi.com/1422-0067/21/12/4310/htm)
+In review.
