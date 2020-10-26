@@ -65,7 +65,7 @@ predict_in_shiny <- function(object, newdata) {
       
       for (i in 1:1) {
         Sys.sleep(0.5)
-        prediction_percentage <<- prediction_percentage + 1/length(newdata)*100
+        prediction_percentage <- prediction_percentage + 1/length(newdata)*100
         incProgress(1/length(newdata), detail = paste0(round(prediction_percentage, 2), 
                                                        "% proteins analyzed"))
       }
