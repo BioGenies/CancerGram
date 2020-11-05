@@ -1,3 +1,4 @@
+[![published in: Pharmaceutics](https://img.shields.io/badge/published%20in-Pharmaceutics-green.svg)](https://doi.org/10.3390/pharmaceutics12111045)
 [![R build status](https://github.com/BioGenies/CancerGram/workflows/R-CMD-check/badge.svg)](https://github.com/BioGenies/CancerGram/actions)
 
 
