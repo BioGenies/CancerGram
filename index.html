@@ -81,36 +81,36 @@
 <h2 class="hasAnchor">
 <a href="#local-instance-of-cancergram" class="anchor"></a>Local instance of CancerGram</h2>
 <p>You can install the latest development version of the package:</p>
-<div class="sourceCode" id="cb1"><pre class="downlit">
-<span class="kw"><a href="https://rdrr.io/r/base/source.html">source</a></span><span class="op">(</span><span class="st">"https://raw.githubusercontent.com/r-lib/remotes/master/install-github.R"</span><span class="op">)</span><span class="op">$</span><span class="fu">value</span><span class="op">(</span><span class="st">"BioGenies/CancerGram"</span><span class="op">)</span></pre></div>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/source.html">source</a></span><span class="op">(</span><span class="st">"https://raw.githubusercontent.com/r-lib/remotes/master/install-github.R"</span><span class="op">)</span><span class="op">$</span><span class="fu">value</span><span class="op">(</span><span class="st">"BioGenies/CancerGram"</span><span class="op">)</span></code></pre></div>
 <p>After installation GUI can be accessed locally:</p>
-<div class="sourceCode" id="cb2"><pre class="downlit">
-<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/BioGenies/CancerGram">CancerGram</a></span><span class="op">)</span>
-<span class="fu"><a href="reference/CancerGram_gui.html">CancerGram_gui</a></span><span class="op">(</span><span class="op">)</span></pre></div>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/BioGenies/CancerGram">CancerGram</a></span><span class="op">)</span>
+<span class="fu"><a href="reference/CancerGram_gui.html">CancerGram_gui</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
 </div>
 <div id="installing-dependency-cancergrammodel" class="section level2">
 <h2 class="hasAnchor">
 <a href="#installing-dependency-cancergrammodel" class="anchor"></a>Installing dependency: CancerGramModel</h2>
 <p>To be able to use CancerGram properly, you should have installed the ‘CancerGramModel’ package available via GitHub. CancerGramModel contains stacked random forest model and informative n-grams required for prediction of anticancer peptides. Due to the large size of a model, it needs to be stored in the external repository, as CRAN do not allow upload of files larger than 5 MB.</p>
 <p>You can install CancerGramModel using the install_CancerGramModel function:</p>
-<div class="sourceCode" id="cb3"><pre class="downlit">
-<span class="fu"><a href="reference/install_CancerGramModel.html">install_CancerGramModel</a></span><span class="op">(</span><span class="op">)</span></pre></div>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="reference/install_CancerGramModel.html">install_CancerGramModel</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
 <p>Anticancer peptides might be also identified in the batch mode:</p>
-<div class="sourceCode" id="cb4"><pre class="downlit">
-<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/BioGenies/CancerGram">CancerGram</a></span><span class="op">)</span>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/BioGenies/CancerGram">CancerGram</a></span><span class="op">)</span>
 <span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va">CancerGramModel</span><span class="op">)</span>
 <span class="co"># if you do not have CancerGramModel use:</span>
 <span class="co"># install_CancerGramModel()</span>
 <span class="va">sequences</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/read_txt.html">read_txt</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/system.file.html">system.file</a></span><span class="op">(</span><span class="st">"CancerGram/prots.txt"</span>, package <span class="op">=</span> <span class="st">"CancerGram"</span><span class="op">)</span><span class="op">)</span>
-<span class="fu"><a href="https://rdrr.io/r/stats/predict.html">predict</a></span><span class="op">(</span><span class="va">CancerGram_model</span>, <span class="va">sequences</span><span class="op">)</span></pre></div>
+<span class="fu"><a href="https://rdrr.io/r/stats/predict.html">predict</a></span><span class="op">(</span><span class="va">CancerGram_model</span>, <span class="va">sequences</span><span class="op">)</span></code></pre></div>
 </div>
 <div id="unixmacos-curl" class="section level2">
 <h2 class="hasAnchor">
 <a href="#unixmacos-curl" class="anchor"></a>Unix/macOS: curl</h2>
 <p>The curl library is one of the dependencies of the CancerGram package and requires additional, non-R software. If you encounter an error concerning curl, please follow instructions below to install curl (adapted from <a href="https://github.com/jeroen/curl" class="uri">https://github.com/jeroen/curl</a>).</p>
 <p>Binary packages for OS-X or Windows can be installed directly from CRAN:</p>
-<div class="sourceCode" id="cb5"><pre class="downlit">
-<span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"curl"</span><span class="op">)</span></pre></div>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"curl"</span><span class="op">)</span></code></pre></div>
 <p>Installation from source on Linux requires <code>libcurl</code>. On Debian or Ubuntu use libcurl4-openssl-dev:</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1"></a><span class="fu">sudo</span> apt-get install -y libcurl-dev</span></code></pre></div>
 <p>On Fedora, CentOS or RHEL use libcurl-devel:</p>
@@ -156,6 +156,7 @@
   <div class="dev-status">
 <h2>Dev status</h2>
 <ul class="list-unstyled">
+<li><a href="https://doi.org/10.3390/pharmaceutics12111045"><img src="https://img.shields.io/badge/published%20in-Pharmaceutics-green.svg" alt="published in: Pharmaceutics"></a></li>
 <li><a href="https://github.com/BioGenies/CancerGram/actions"><img src="https://github.com/BioGenies/CancerGram/workflows/R-CMD-check/badge.svg" alt="R build status"></a></li>
 </ul>
 </div>
