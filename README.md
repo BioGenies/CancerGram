@@ -7,6 +7,10 @@ Identify anticancer peptides
 
 CancerGram identifies anticancer peptides using n-gram encoding and random forests. It can be also accessed as a web-based service http://biongram.biotech.uni.wroc.pl/CancerGram/. 
 
+How to cite?
+-------------------------
+Please use: Burdukiewicz, M., Sidorczuk, K., Rafacz, D., Pietluch, F., Bąkała, M., Słowik, J., and Gagat, P. (2020). CancerGram: An Effective Classifier for Differentiating Anticancer from Antimicrobial Peptides. Pharmaceutics 12, 1045, https://doi.org/10.3390/pharmaceutics12111045.
+
 Local instance of CancerGram
 ------------------------
 

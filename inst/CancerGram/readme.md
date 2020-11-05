@@ -10,4 +10,4 @@
 **Authors**: Michal Burdukiewicz, Filip Pietluch, Katarzyna Sidorczuk
 
 **Citation**:
-In review.
+Please use: Burdukiewicz, M., Sidorczuk, K., Rafacz, D., Pietluch, F., Bąkała, M., Słowik, J., and Gagat, P. (2020). CancerGram: An Effective Classifier for Differentiating Anticancer from Antimicrobial Peptides. Pharmaceutics 12, 1045, https://doi.org/10.3390/pharmaceutics12111045.
