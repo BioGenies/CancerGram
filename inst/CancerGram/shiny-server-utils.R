@@ -55,7 +55,7 @@ predict_in_shiny <- function(object, newdata) {
                                   CancerGram:::calculate_statistics_mc(all_mers_pred, c("acp", "amp", "neg")))[["predictions"]]
       
       
-    #  decision<-CancerGram:::get_decision(data.frame(single_prot_pred))
+      #  decision<-CancerGram:::get_decision(data.frame(single_prot_pred))
       
       res <- list(seq = ith_seq,
                   all_mers_pred = all_mers_pred,
@@ -63,12 +63,9 @@ predict_in_shiny <- function(object, newdata) {
       
       class(res) <- "single_ampgram_pred"
       
-      for (i in 1:1) {
-        Sys.sleep(0.5)
-        prediction_percentage <<- prediction_percentage + 1/length(newdata)*100
-        incProgress(1/length(newdata), detail = paste0(round(prediction_percentage, 2), 
-                                                       "% proteins analyzed"))
-      }
+      
+      incProgress(1/length(newdata), detail = "Analyzing proteins...")
+      
       res
     })
     
@@ -79,7 +76,6 @@ predict_in_shiny <- function(object, newdata) {
   } else {
     names(all_preds) <- names(newdata)
   }
-    
+  
   all_preds
 }
-

@@ -5,6 +5,7 @@
 **Restrictions**:
 * Be patient - calculations can take up to few minutes.  
 * Up to 50 sequences may be analyzed at the same time using web server. If you need larger query, please use the [CancerGram](https://CRAN.R-project.org/package=CancerGram) package for **R**.
+* Do **not** use sequences shorter than 5 amino acids, and remember that CancerGram was trained on sequences up to 50 amino acids in length.
 
 **Authors**: Michal Burdukiewicz, Filip Pietluch, Katarzyna Sidorczuk
 
