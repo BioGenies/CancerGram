@@ -1,7 +1,7 @@
 library(shiny)
 library(shinythemes)
 
-shinyUI(fluidPage(tags$head(includeScript("ga.js"), 
+shinyUI(fluidPage(tags$head(includeHTML("ga.html"), 
                             tags$link(rel = "stylesheet", type = "text/css", href = "progress.css")),
                   title = "Cancergram",
                   theme = shinytheme("spacelab"),
