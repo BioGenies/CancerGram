@@ -1,4 +1,4 @@
-<img src="cancer.jpg" alt="logo" style="width: 200px;"/>
+<img src="Cancergram2.png" alt="logo" style="width: 200px;"/>
 
 **CancerGram** identifies anticancer peptides using [random forests](https://www.stat.berkeley.edu/~breiman/RandomForests/cc_home.htm) and [n-gram encoding](http://github.com/michbur/biogram).   
 
