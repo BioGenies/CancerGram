@@ -29,10 +29,11 @@ Authors@R: c(person("Michal", "Burdukiewicz",
            email = "jadwiga.slowik5@gmail.com",
            role = c("ctb")))
 Description: Predicts anticancer peptides using random forests trained on the
-    n-gram encoded peptides (10.3390/pharmaceutics12111045). The implemented algorithm can be accessed from
+    n-gram encoded peptides. The implemented algorithm can be accessed from
     both the command line and shiny-based GUI. The CancerGram model is too large 
     for CRAN and it has to be downloaded separately from the repository:
-    <https://github.com/BioGenies/CancerGramModel>.
+    <https://github.com/BioGenies/CancerGramModel>. For more information see: 
+    Burdukiewicz et al. (2020) <doi:10.3390/pharmaceutics12111045>. 
 License: GPL-3
 URL: https://github.com/BioGenies/CancerGram
 BugReports: https://github.com/BioGenies/CancerGram/issues
