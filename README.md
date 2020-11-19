@@ -1,6 +1,7 @@
 [![published in: Pharmaceutics](https://img.shields.io/badge/published%20in-Pharmaceutics-green.svg)](https://doi.org/10.3390/pharmaceutics12111045)
 [![R build status](https://github.com/BioGenies/CancerGram/workflows/R-CMD-check/badge.svg)](https://github.com/BioGenies/CancerGram/actions)
-
+[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/CancerGram)](https://cran.r-project.org/package=CancerGram)
+[![Downloads](http://cranlogs.r-pkg.org/badges/CancerGram)](https://cran.r-project.org/package=CancerGram)
 
 Identify anticancer peptides
 -------------------------
